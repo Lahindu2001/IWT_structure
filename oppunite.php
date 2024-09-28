@@ -48,11 +48,6 @@
         <p>we always youre familly</p>
     </header>
 
-    <div class="search-bar">
-        <input type="text" placeholder="search..." />
-        <button>search</button>
-    </div>
-<br>
     <div class="container">
         <div class="grid">
             <div class="card">

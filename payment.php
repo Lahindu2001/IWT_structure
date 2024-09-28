@@ -62,10 +62,7 @@
         <p>We offer various payment methods to suit your preferences and make paying premiums easy.</p>
     </header>
 
-    <div class="search-bar">
-        <input type="text" placeholder="search payment..." />
-        <button>search</button>
-    </div>
+   
 <br>
     <div class = "g1">
         <h1>Pay through AIA QuickPay or AIA Customer Portal</h1>

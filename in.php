@@ -22,7 +22,7 @@
         <a href="table1.php" > Manage Users</a>
         <a href="table2.php"> Manage Claim</a>
         <a href="table3.php"> Manage Employees</a>
-        <a href="#"> Manage Policies</a>
+        <a href="table4.php"> Manage meeting</a>
         <a href="in.php"> Settings</a>
         <a href="#"> Logout</a>
     </div>

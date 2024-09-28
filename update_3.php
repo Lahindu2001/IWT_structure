@@ -11,7 +11,7 @@ $employId = $_GET["employeeID"];
    $employNIC  = $_GET["nic"];
    $employAdminId  = $_GET["adminId"];
 
-if(empty($employId)||empty($employName)||empty($employEmail)||empty($employpassword)||empty($employdob)||empty($employAdress)||empty($employNIC)|empty($employAdminId)){
+if(empty($employId)||empty($employName)||empty($employEmail)||empty($employpassword)||empty($employdob)||empty($employAdress)||empty($employNIC)||empty($employAdminId)){
     echo "all requried";
 }
 else{

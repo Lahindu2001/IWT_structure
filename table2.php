@@ -20,9 +20,9 @@
     <div class="scrollmenu" >
         <a href="in.php"> Dashboard</a>
         <a href="table1.php" > Manage Users</a>
-        <a href="table2.php"> Manage Claim</a>
+        <a href="table2.php" style="background-color:#220676"> Manage Claim</a>
         <a href="table3.php"> Manage Employees</a>
-        <a href="in.php"> Manage Policies</a>
+        <a href="table4.php"> Manage meeting</a>
         <a href="in.php"> Settings</a>
         <a href="#"> Logout</a>
     </div>
