@@ -4,17 +4,21 @@ require 'config.php';
 
 $userId = $_GET["userid"];
 $userName = $_GET["name"];
-$userEmail  = $_GET["email"];
-$userphone  = $_GET["phone"];
+$userDob  = $_GET["date"];
+$userGender = $_GET["gender"];
+$userphoneNo = $_GET["phone"];
 $userAdress  = $_GET["address"];
+$userGmail  = $_GET["email"];
+$userPassword  = $_GET["password"];
 $userplanetype  = $_GET["planetype"];
 
-if(empty($userId)||empty($userName)||empty($userEmail)||empty($userphone)||empty($userAdress)||empty($userplanetype)){
+if(empty($userName)||empty($userDob)||empty($userGender)||empty($userphoneNo)||empty($userAdress)||empty($userGmail)||empty($userplanetype)){
     echo "all requried";
 }
 else{
 
-$sql = "UPDATE userdetail set User_ID='$userId' , Name='$userName' , email ='$userEmail' ,Phone= '$userphone', Address= '$userAdress' , Plane_Type = '$userplanetype' WHERE User_ID='$userId'";
+  
+$sql = "UPDATE userdetail set userId='$userId' , name='$userName' , dob ='$userDob' ,gender= '$userGender', phoneNo= '$userphoneNo' , address = '$userAdress' , email='$userGmail' , password= '$userPassword' ,planeType='$userplanetype'    WHERE userId='$userId'";
 
 if($con->query($sql))
 {
