@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="src\asserts\css\in.css">
     <script src="in.js"></script>
 </head>
-
-<body>
-
-    <div class="header">
-        <center> <img src="profile.jpg" alt="logo" width="50px" length="50px"> </center>
+        <div class="header">
+        <center> <img src="src/asserts/images/logo.png" alt="logo" width="100px" length="100px"> </center>
         <h1 >Admin Dashboard - Life Insurance Management System </h1>
         <script>document.write(Date());</script>
         <h4>Welcome, Admin</h4>
@@ -28,34 +25,32 @@
     </div>
 
     <div class="main-content">
-
-        <!-- Manage Users Section -->
         <div class="section">
             <br>
-            <h3 >Manage Users</h3>
+            <h3 >Manage Users </h3>
             <table>
                 <div class="table" >
                 <?php
 
                 require 'config.php';
-                $sql = "SELECT User_ID,Name,email,Phone,Address,Plane_Type from userdetail";
+                $sql = "SELECT 	userId,name,dob,gender,phoneNo,address,email,password,planeType from userdetail";
 
                 $result =$con->query($sql);
                 echo "<table border='1'>";
 
 
-                    echo "<tr><th>User ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Adress</th><th>plane type</th><th>Action</th>";
+                    echo "<tr><th>User ID</th><th>Name</th><th>Date of Birth</th><th>Gender</th><th>Phone number</th><th>adress</th><th>gmail</th><th>plane Type</th><th>staus</th>";
                         while($row = $result->fetch_assoc()){
                         echo"<tr>";
-                        echo "<td >".$row["User_ID"]."</td>"."<td>".$row["Name"]."</td>"."<td>".$row["email"]."</td>". "<td>".$row["Phone"]."</td>"."<td>".$row["Address"]."</td>"."<td>".$row["Plane_Type"]."</td>";
+                        echo "<td >".$row["userId"]."</td>"."<td>".$row["name"]."</td>"."<td>".$row["dob"]."</td>". "<td>".$row["gender"]."</td>"."<td>".$row["phoneNo"]."</td>"."<td>".$row["address"]."</td>"."<td>".$row["email"]."</td>"."<td>".$row["planeType"]."</td>";
                         echo "<td>
                         <form action='deleted1.php' method='POST'>
-                            <input type='hidden' name='delete' value='" . $row["User_ID"] . "'>
+                            <input type='hidden' name='delete' value='" . $row["userId"] . "'>
                             <input type='submit' value='Delete'class='btn btn-delete'>
 
                         </form>
                          <form action='updatemain1.php' method='POST'>
-                            <input type='hidden' name='update' value='" . $row["User_ID"] . "'>
+                            <input type='hidden' name='update' value='" . $row["userId"] . "'>
                             <input type='submit' value='Update'class='btn btn-edit'>
 
                         </form>

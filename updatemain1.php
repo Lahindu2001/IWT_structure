@@ -33,11 +33,12 @@
             color: #0056b3; 
             font-weight: bold;
         }
-
         input[type="text"],
         input[type="email"],
         input[type="tel"],
+        input[type="date"],
         input[type="submit"],
+        input[type="tel"],
         select {
             width: 100%;
             padding: 10px;
@@ -72,18 +73,21 @@
 
     $nic =$_POST["update"];
 
-    $sql = "SELECT User_ID,Name,email,Phone,Address,Plane_Type from userdetail where User_ID ='$nic'";
+    $sql = "SELECT userId,name,dob,gender,phoneNo,address,email,password,planeType from userdetail where userId ='$nic'";
+   
 
     $result =$con->query($sql);
             while($row = $result->fetch_assoc()){
             
-            $uid =  $row["User_ID"];
-           $uname = $row["Name"];
-           $uemail = $row["email"];
-           $uphone = $row["Phone"];
-           $address = $row["Address"];
-           $planeT = $row["Plane_Type"];
-
+           $userId = $row["userId"];
+            $userName = $row["name"];
+            $userDob  = $row["dob"];
+            $userGender = $row["gender"];
+            $userphoneNo = $row["phoneNo"];
+            $userAdress  = $row["address"];
+            $userGmail  = $row["email"];
+            $userPassword  = $row["password"];
+            $userplanetype  = $row["planeType"];
             }
 
             
@@ -92,22 +96,34 @@
         <legend>update customer Deatil</legend>
         <form  method ='get' action ='update_1.php'>
 
-        <input type='hidden' id='userid' name='userid' value = '$uid' > 
+        <input type='hidden' id='userid' name='userid' value = '$userId' > 
 
         <label >Name:</label>
-        <input type='text' id='name' name='name' value='$uname'>
+        <input type='text' id='name' name='name' value='$userName'>
 
-        <label >Email:</label>
-        <input type='email' id='email' name='email' value='$uemail'>
+        <label >Date of Birth:</label>
+        <input type='date' id='date' name='date' value='$userDob'>
+        
+
+        <label for='gender'>Gender:</label>
+        <select id='gender' name='gender' required value='$userGender'>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+        </select>
 
         <label >Phone:</label>
-        <input type='tel' id='phone' name='phone' value='$uphone'>
-
+        <input type='tel' id='phone' name='phone' value='$userphoneNo' pattern='[0-9]{10}'>
+        
         <label >Address:</label>
-        <input type='text' id='address' name='address' value='$address'>
+        <input type='text' id='address' name='address' value='$userAdress'>
+
+        <label >Email:</label>
+        <input type='email' id='email' name='email' value='$userGmail'>
+
+        <input type='hidden' id='password' name='password' value = '$userPassword'>
 
         <label for='planetype'>Plan type:</label>
-        <select id='planetype' name='planetype' required value='$planeT'>
+        <select id='planetype' name='planetype' required value='$userplanetype'>
             <option value='Family_all'>Family all in one plan</option>
             <option value='Emergency'>Emergency coverage plan</option>
             <option value='Elder'>Elder Critizen</option>

@@ -1,7 +1,34 @@
-<?php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inet form data</title>
+    <style>
+        div{
+            margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+        }
+    .btn-back{
+        background-color: #dc3545;
+        padding: 10px 25px;
+        font-size: 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+        
+    }  
+    </style>
+</head>
+<body>
+    <?php
     require 'config.php';
     
-   $clamId = $_POST["claimId"];
+
    $userId  = $_POST["userId"];
    $clamamount  = $_POST["amount"];
    $clamdiscription  = $_POST["claimDescription"];
@@ -13,8 +40,12 @@
    $sql = "INSERT INTO claim VALUES ('','$userId','$clamamount','$clamdiscription' , '$clamdate' ,'$clamstatus' , '$adminId')";
 
    if($con->query($sql)){
-    header("Location: table2.php");
-    exit(); 
+    echo "<script>
+ alert('Insert done');
+ </script>
+<div>
+ <center><a href='table2.php' ><button class='btn-back'>back to the home</button></a></center> 
+</div>";
    }
    else{
     echo "Error".$con->error;
@@ -23,5 +54,5 @@
    $con->close();
 ?>
 
-
-<!-- sg;sdnvlsnfdvlknlznvlkdnfvlsk -->
+</body>
+</html>

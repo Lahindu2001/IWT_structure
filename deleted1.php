@@ -3,7 +3,7 @@ require 'config.php';
 
 $nic =$_POST["delete"];
 
-$sql ="DELETE from userdetail where User_ID ='$nic'";
+$sql ="DELETE from userdetail where userid ='$nic'";
 
 if($con->query($sql)){
  

@@ -37,7 +37,9 @@
         input[type="text"],
         input[type="email"],
         input[type="tel"],
+        input[type="date"],
         input[type="submit"],
+        input[type="tel"],
         select {
             width: 100%;
             padding: 10px;
@@ -73,23 +75,36 @@
 <form  method ="post" action ="insert.php">
         <h1>User Information</h1>
 
-        <!-- <label>User ID:</label>
-        <input type="text" id="userid" name="userid" > -->
+<!--
+        <input type='text' id='userid' name='userid'  > -->
 
         <label >Name:</label>
         <input type="text" id="name" name="name" >
 
-        <label >Email:</label>
-        <input type="email" id="email" name="email" >
+        <label >Date of Birth:</label>
+        <input type="date" id="date" name="date" >
+        
+     
+        <label for='gender'>Gender:</label>
+        <select id='gender' name='gender' required>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+        </select>
+
 
         <label >Phone:</label>
-        <input type="tel" id="phone" name="phone" >
-
+        <input type="tel" id="phone" name="phone"  pattern="[0-9]{10}">
+        
         <label >Address:</label>
         <input type="text" id="address" name="address" >
 
+        <label >Email:</label>
+        <input type="email" id="email" name="email" >
+
+        <input type="hidden" id="password" name="password" >
+
         <label for="planetype">Plan type:</label>
-        <select id="planetype" name="planetype" required>
+        <select id="planetype" name="planetype" required >
             <option value="Family_all">Family all in one plan</option>
             <option value="Emergency">Emergency coverage plan</option>
             <option value="Elder">Elder Critizen</option>
@@ -98,6 +113,7 @@
 
         <input type="submit" value="Submit">
         <input type="reset" value="reset">
+        </form>
     </form>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <body>
 
     <div class="header">
-        <center> <img src="profile.jpg" alt="logo" width="50px" length="50px"> </center>
+        <center> <img src="src/asserts/images/logo.png" alt="logo" width="100px" length="100px"> </center>
         <h1 >Admin Dashboard - Life Insurance Management System </h1>
         <script>document.write(Date());</script>
         <h4>Welcome, Admin</h4>
