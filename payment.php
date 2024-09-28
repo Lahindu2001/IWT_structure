@@ -15,6 +15,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style> header {
+    background-image: url('src/asserts/images/payment.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+</style>
 </head>
 
 <body>
@@ -54,10 +70,10 @@
     <div class = "g1">
         <h1>Pay through AIA QuickPay or AIA Customer Portal</h1>
         <div class="d1">
-        <a href ="commingsoon.php" target="_blank"><div >
+        <a href ="commingsoon.php" target=""><div >
                 <h1>ASSURE PAY</h1>
             </div></a>
-            <a href ="commingsoon.php" target="_blank"><div >
+            <a href ="commingsoon.php" target=""><div >
                 <h1>assure Customer portel</h1>
             </div></a>
             
