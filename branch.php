@@ -192,10 +192,7 @@ footer {
             you.</p>
     </header>
 
-    <div class="search-bar">
-        <input type="text" placeholder="search branch..." />
-        <button>search</button>
-    </div>
+    
 
     <div class = "g1">
         <div class="d1">

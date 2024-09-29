@@ -5,6 +5,15 @@
     <title>Admin</title>
     <link rel="stylesheet" href="src\asserts\css\in.css">
     <script src="in.js"></script>
+    <style> .subbut {
+        padding: 10px 20px;
+        background-color: rgb(0, 179, 220);
+        color: rgb(86, 86, 82);
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    } </style>
 </head>
 
 <body>
@@ -22,11 +31,20 @@
         <a href="table2.php"> Manage Claim</a>
         <a href="table3.php"> Manage Employees</a>
         <a href="table4.php" style="background-color:#220676"> Manage meeting</a>
+        <a href="table5.php"> Manage custormer reqest</a>
         <a href="in.php"> Settings</a>
         <a href="#"> Logout</a>
     </div>
 
     <div class="main-content">
+
+    
+    <div class="search-bar">
+        <form action="search4.php" method="POST">
+        <input type="text" name='search' value = "" placeholder = "search agent service / nic / locaion">
+        <button class = "subbut" input type='submit' value='search'>search</button>
+        </form></div>
+
         <div class="section">
             <h3>Manage metting</h3>
             <table>
@@ -67,6 +85,10 @@
             <center><a href="adduserform4.php" ><button class="btn btn-add">ADD New Meeting</button></a></center>
         </div>
     </div>
+    </div><
+        <div class = "backb">
+ <center><a href='in.php' ><button class='btn-back'>back to Dashbord</button></a></center> 
+</div>
 
 </body>
 
