@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>inet form data</title>
+    
     <style>
         div{
             margin: 0;

@@ -63,6 +63,8 @@
             color: #0056b3;
         }
     </style>
+    <script src="src/asserts/js/js2.js"></script>
+
 </head>
 <body>
 
@@ -70,7 +72,7 @@
     require 'config.php';
 ?>
 
-<form  method ="post" action ="insert2.php">
+<form  method ="post" action ="insert2.php" onsubmit="return validateForm()">
         <h1>User Information</h1>
 <!-- 
         <label>Clam ID:</label>
