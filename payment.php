@@ -150,7 +150,7 @@
                 <a href ="https://www.neosonline.ndbbank.com/#/login" target="_blank"><img src = "src/asserts/images/nsbne.png" alt ="NDb neos" width= 100px height = "100px"><h1>NDb neos</h1></a>
             </div>
             <div >
-                <a href ="https://www.getsolo.lk/" target="_blank"><img src = "HNBSolo.png" alt ="src/asserts/images/HNB solo" width= 100px height = "100px"><h1>HNB solo</h1></a>
+                <a href ="https://www.getsolo.lk/" target="_blank"><img src = "src/asserts/images/HNBSolo.png" alt ="src/asserts/images/HNB solo" width= 100px height = "100px"><h1>HNB solo</h1></a>
             </div>
         </div>
     </div>

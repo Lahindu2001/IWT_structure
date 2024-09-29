@@ -41,7 +41,7 @@
 
    if($con->query($sql)){
     echo "<script>
- alert('Insert done');
+ alert('succesful done');
  </script>
 <div>
  <center><a href='table2.php' ><button class='btn-back'>back to the home</button></a></center> 
