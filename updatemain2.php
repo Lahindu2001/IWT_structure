@@ -127,6 +127,8 @@
             <option value='Admin 1'>ADMIN 1</option>
             <option value='Admin 2'>ADMIN 2</option>
             <option value='Admin 3'>ADMIN 3</option>
+             <option value='Admin 4'>ADMIN 2</option>
+            <option value='Admin 5'>ADMIN 3</option>
         </select>
 
         <input type='submit' value='Submit'>
