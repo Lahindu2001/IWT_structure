@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
         body {
@@ -65,6 +66,7 @@
         }
     </style>
     <title>Update user detail</title>
+    <script src="src/asserts/js/js1.js"></script>
 </head>
 <body>
     
@@ -94,7 +96,7 @@
      echo"      
     <fieldset>
         <legend>update customer Deatil</legend>
-        <form  method ='get' action ='update_1.php'>
+        <form  method ='get' action ='update_1.php' onsubmit='return validateForm()'>
 
         <input type='hidden' id='userid' name='userid' value = '$userId' > 
 
@@ -107,6 +109,7 @@
 
         <label for='gender'>Gender:</label>
         <select id='gender' name='gender' required value='$userGender'>
+            <option value=''>--Select Gender--</option>
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
         </select>
@@ -124,6 +127,7 @@
 
         <label for='planetype'>Plan type:</label>
         <select id='planetype' name='planetype' required value='$userplanetype'>
+             <option value=''>--Select Gender--</option>
             <option value='Family_all'>Family all in one plan</option>
             <option value='Emergency'>Emergency coverage plan</option>
             <option value='Elder'>Elder Critizen</option>

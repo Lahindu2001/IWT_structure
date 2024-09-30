@@ -65,6 +65,7 @@
             color: #0056b3;
         }
     </style>
+    <script src="src/asserts/js/js1.js"></script>
 </head>
 <body>
 
@@ -72,7 +73,7 @@
     require 'config.php';
 ?>
 
-<form  method ="post" action ="insert.php">
+<form  method ="post" action ="insert.php" onsubmit="return validateForm()">
         <h1>User Information</h1>
 
 <!--
@@ -87,6 +88,7 @@
      
         <label for='gender'>Gender:</label>
         <select id='gender' name='gender' required>
+            <option value="">--Select Gender--</option>
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
         </select>
@@ -105,6 +107,7 @@
 
         <label for="planetype">Plan type:</label>
         <select id="planetype" name="planetype" required >
+            <option value="">--Select plan--</option>
             <option value="Family_all">Family all in one plan</option>
             <option value="Emergency">Emergency coverage plan</option>
             <option value="Elder">Elder Critizen</option>

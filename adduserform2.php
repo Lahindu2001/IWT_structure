@@ -63,6 +63,8 @@
             color: #0056b3;
         }
     </style>
+    <script src="src/asserts/js/js2.js"></script>
+
 </head>
 <body>
 
@@ -70,7 +72,7 @@
     require 'config.php';
 ?>
 
-<form  method ="post" action ="insert2.php">
+<form  method ="post" action ="insert2.php" onsubmit="return validateForm()">
         <h1>User Information</h1>
 <!-- 
         <label>Clam ID:</label>
@@ -90,6 +92,7 @@
         
         <label for="status">status:</label>
         <select id="status" name="status" required>
+        <option value="">--Select level--</option>
             <option value="LEVEL_1">LEVEL 1</option>
             <option value="LEVEL_2">LEVEL 2</option>
             <option value="LEVEL_3">LEVEL 3</option>
@@ -97,9 +100,13 @@
 
         <label for="adminId">admin Id:</label>
         <select id="adminId" name="adminId">
+        <option value="">--Select admin--</option>
             <option value="Admin 1">ADMIN 1</option>
             <option value="Admin 2">ADMIN 2</option>
             <option value="Admin 3">ADMIN 3</option>
+            <option value="Admin 1">ADMIN 4</option>
+            <option value="Admin 2">ADMIN 5</option>
+       
         </select>
 
         <input type="submit" value="Submit">

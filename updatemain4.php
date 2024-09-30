@@ -68,6 +68,7 @@
         }
     </style>
     <title>Update user detail</title>
+    <script src="src/asserts/js/js1.js"></script>
 </head>
 <body>
     
