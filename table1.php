@@ -56,16 +56,16 @@
                 <?php
 
                 require 'config.php';
-                $sql = "SELECT 	userId,name,dob,gender,phoneNo,address,email,password,planeType from userdetail";
+                $sql = "SELECT 	userId,name,dob,gender,phoneNo,address,email,planeType,usertype from userdetail";
 
                 $result =$con->query($sql);
                 echo "<table border='1'>";
 
 
-                    echo "<tr><th>User ID</th><th>Name</th><th>Date of Birth</th><th>Gender</th><th>Phone number</th><th>adress</th><th>gmail</th><th>plane Type</th><th>staus</th>";
+                    echo "<tr><th>User ID</th><th>Name</th><th>Date of Birth</th><th>Gender</th><th>Phone number</th><th>adress</th><th>gmail</th><th>plane Type</th><th>staus</th><th>user type</th>";
                         while($row = $result->fetch_assoc()){
                         echo"<tr>";
-                        echo "<td >".$row["userId"]."</td>"."<td>".$row["name"]."</td>"."<td>".$row["dob"]."</td>". "<td>".$row["gender"]."</td>"."<td>".$row["phoneNo"]."</td>"."<td>".$row["address"]."</td>"."<td>".$row["email"]."</td>"."<td>".$row["planeType"]."</td>";
+                        echo "<td >".$row["userId"]."</td>"."<td>".$row["name"]."</td>"."<td>".$row["dob"]."</td>". "<td>".$row["gender"]."</td>"."<td>".$row["phoneNo"]."</td>"."<td>".$row["address"]."</td>"."<td>".$row["email"]."</td>"."</td>"."<td>".$row["planeType"]."</td>"."<td>".$row["usertype"]."</td>";
                         echo "<td>
                         <form action='deleted1.php' method='POST'>
                             <input type='hidden' name='delete' value='" . $row["userId"] . "'>
