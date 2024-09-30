@@ -35,7 +35,6 @@ $Gender = $_POST["gender"];
 $contact = $_POST["contact"];
 $Adress = $_POST["address"];
 $email = $_POST["email"];
-$User_name = $_POST["name"];
 $Password = $_POST["password"];
 $ConPassword = $_POST["confirmpassword"];
 $usertype = $_POST["usertype"];
@@ -44,7 +43,7 @@ $usertype = $_POST["usertype"];
 
 
 
-$sql = "INSERT INTO userdetail VALUES ('','$first_name','$Dateofbirt','$Gender' , '$contact' ,'$Adress ','$email','$User_name','$Password','$ConPassword','$userplanetype','$usertype ')";
+$sql = "INSERT INTO userdetail VALUES ('','$first_name','$Dateofbirt','$Gender' , '$contact' ,'$Adress ','$email','$Password','$ConPassword','$userplanetype','$usertype ')";
 
 if($con->query($sql)){
     

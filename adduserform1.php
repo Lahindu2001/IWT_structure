@@ -103,13 +103,9 @@
         <label >Email:</label>
         <input type="email" id="email" name="email" >
 
-        <label >User name</label>
-        <input type = "text" id = "uname" name="userName" required>
-
         
         <input type = "hidden" id = "password" name="password" value = "User@1234">
 
-      
         <input type = "hidden" id = "confirmpassword" name="confirmpassword" value = "User@1234">
 
         <label for="planetype">Plan type:</label>

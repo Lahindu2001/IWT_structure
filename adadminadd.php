@@ -96,8 +96,6 @@
             <label >Email adress</label>
             <input type = "email" id = "email" name="email" required>
 
-            <label >User name</label>
-            <input type = "text" id = "uname" name="userName" required>
 
             <input type = "hidden" id = "password" name="password" value = "User@1234">
 or
