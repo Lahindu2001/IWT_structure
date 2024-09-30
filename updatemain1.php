@@ -75,7 +75,7 @@
 
     $nic =$_POST["update"];
 
-    $sql = "SELECT userId,name,dob,gender,phoneNo,address,email,password,planeType from userdetail where userId ='$nic'";
+    $sql = "SELECT userId,name,dob,gender,phoneNo,address,email,password,planeType,usertype from userdetail where userId ='$nic'";
    
 
     $result =$con->query($sql);
@@ -88,8 +88,9 @@
             $userphoneNo = $row["phoneNo"];
             $userAdress  = $row["address"];
             $userGmail  = $row["email"];
-            $userPassword  = $row["password"];
             $userplanetype  = $row["planeType"];
+            $usertype  = $row["usertype"];
+
             }
 
             
@@ -109,7 +110,6 @@
 
         <label for='gender'>Gender:</label>
         <select id='gender' name='gender' required value='$userGender'>
-            <option value=''>--Select Gender--</option>
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
         </select>
@@ -123,16 +123,21 @@
         <label >Email:</label>
         <input type='email' id='email' name='email' value='$userGmail'>
 
-        <input type='hidden' id='password' name='password' value = '$userPassword'>
-
+    
         <label for='planetype'>Plan type:</label>
         <select id='planetype' name='planetype' required value='$userplanetype'>
-             <option value=''>--Select Gender--</option>
             <option value='Family_all'>Family all in one plan</option>
             <option value='Emergency'>Emergency coverage plan</option>
             <option value='Elder'>Elder Critizen</option>
             <option value='complete'>complete coverage</option>
+            <option value='none'>none</option>
         </select>
+
+             <label for = 'usertype' >user type:</label>
+        <select id='usertype'  name='usertype' required value='$usertype'>
+        <option value='ADMIN'>ADMIN</option>
+        <option value='CLIENT'>CLIENT</option>
+
 
         <input type='submit' value='Submit'>
         <input type='reset' value='reset'>

@@ -29,16 +29,19 @@
 <?php
     require 'config.php';
     
-    $userName = $_POST["name"];
+    $name = $_POST["name"];
     $userDob  = $_POST["date"];
     $userGender = $_POST["gender"];
     $userphoneNo = $_POST["phone"];
     $userAdress  = $_POST["address"];
     $userGmail  = $_POST["email"];
+    $username  = $_POST["userName"];
     $userPassword  = $_POST["password"];
+    $userconformPassword  = $_POST["confirmpassword"];
     $userplanetype  = $_POST["planetype"];
+    $usertype = $_POST["usertype"];
 
-   $sql = "INSERT INTO userdetail VALUES ('','$userName','$userDob','$userGender' , '$userphoneNo' ,'$userAdress','$userGmail','$userPassword','$userplanetype')";
+   $sql = "INSERT INTO userdetail VALUES ('','$name','$userDob','$userGender' , '$userphoneNo' ,'$userAdress','$userGmail','$username ','$userPassword','$userconformPassword','$userplanetype' ,'$usertype')";
 
    if($con->query($sql)){
     

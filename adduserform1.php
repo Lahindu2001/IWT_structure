@@ -40,6 +40,7 @@
         input[type="date"],
         input[type="submit"],
         input[type="tel"],
+        input[type="password"],
         select {
             width: 100%;
             padding: 10px;
@@ -93,7 +94,6 @@
             <option value='Female'>Female</option>
         </select>
 
-
         <label >Phone:</label>
         <input type="tel" id="phone" name="phone"  pattern="[0-9]{10}">
         
@@ -103,16 +103,30 @@
         <label >Email:</label>
         <input type="email" id="email" name="email" >
 
-        <input type="hidden" id="password" name="password" >
+        <label >User name</label>
+        <input type = "text" id = "uname" name="userName" required>
+
+        
+        <input type = "hidden" id = "password" name="password" value = "User@1234">
+
+      
+        <input type = "hidden" id = "confirmpassword" name="confirmpassword" value = "User@1234">
 
         <label for="planetype">Plan type:</label>
-        <select id="planetype" name="planetype" required >
+        <select id="planetype" name="planetype" >
             <option value="">--Select plan--</option>
             <option value="Family_all">Family all in one plan</option>
             <option value="Emergency">Emergency coverage plan</option>
             <option value="Elder">Elder Critizen</option>
             <option value="complete">complete coverage</option>
+            <option value="none">none</option>
         </select>
+
+        <label for = 'usertype' >user type:</label>
+        <select id='usertype'  name='usertype' required>
+        <option value=''>--Select Gender--</option>
+        <option value='ADMIN'>ADMIN</option>
+        <option value='CLIENT'>CLIENT</option>
 
         <input type="submit" value="Submit">
         <input type="reset" value="reset">

@@ -3,7 +3,7 @@
 <head>
     <title>comming soon</title>
     <link rel="stylesheet" href="src/asserts/css/commingsoon.css"><style>
-        div{
+       .return {
             margin: 0;
   position: absolute;
   top: 45%;
@@ -23,6 +23,9 @@
     </style>
 </head>
 <body>
+<div class= "heder">
+<?php  include ('hedder.php') ;  ?>
+ </div>
 
 <div class="bgimg">
   
@@ -32,13 +35,13 @@
     <script>
  alert('comming soon.');
  </script>
-<div>
+<div class = "return">
  <center><a href='payment.php' ><button class='btn-back'>back to the home</button></a></center> 
 
 </div>
     <hr>
   </div>
   </div>
-
+  <?php  include ('footer.php') ;  ?>
 </body>
 </html>
