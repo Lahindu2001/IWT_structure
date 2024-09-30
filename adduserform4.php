@@ -66,6 +66,7 @@
             color: #0056b3;
         }
     </style>
+        <script src="src/asserts/js/js1.js"></script>
 </head>
 <body>
 
