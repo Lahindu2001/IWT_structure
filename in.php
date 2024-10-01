@@ -5,6 +5,15 @@
     <title>Admin</title>
     <link rel="stylesheet" href="src\asserts\css\in.css">
     <script src="in.js"></script>
+    <style>.btn-logout{
+        background-color: #dc3545;
+        padding: 10px 25px;
+        font-size: 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+    } </style>
 </head>
 
 <body>
@@ -14,6 +23,13 @@
         <h1 >Admin Dashboard - Life Insurance Management System </h1>
         <script>document.write(Date());</script>
         <h4>Welcome, Admin</h4>
+
+        
+        <form action="adminlogout.php" method="POST">
+	      <input name="Adminlogout" type="submit" value="Log Out" class='btn-logout'>
+	    </form> 
+       
+
     </div>
 
 
@@ -25,7 +41,7 @@
         <a href="table4.php"> Manage meeting</a>
         <a href="table5.php"> Manage custormer reqest</a>
         <a href="in.php"> Settings</a>
-        <a href="#"> Logout</a>
+        
     </div>
 
 
@@ -133,27 +149,7 @@
         <p></p>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 </body>
 
 </html>
