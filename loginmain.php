@@ -1,36 +1,42 @@
-<?php 
 
-require 'config.php';
+<?php
+  require'config.php'; 
+  session_start();
+
+  if(isset($_SESSION["email"])) { 
+    header("Location:client.php");
+    }
+
+$useremail = $_POST['email'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM userdetail WHERE email = '$useremail' AND password = '$password' And usertype='CLIENT'";
+
+$sqli = "SELECT * FROM userdetail WHERE email = '$useremail' AND password = '$password' AND usertype = 'ADMIN'";
+
+$result1 = $con->query($sql);
+$result2 = $con->query($sqli);
 
 
-$useremail = $_POST["email"];
-$password = $_POST["password"];
-
-$sql = "SELECT * from userdetail WHERE email  = '$useremail' AND password = '$password' AND usertype = 'CLIENT' ";
-$sq2 = "SELECT * from userdetail WHERE email  = '$useremail' AND password = '$password' AND usertype = 'ADMIN' ";
-
-$result1 = $con-> query($sql);
-$result2 = $con-> query($sq2);
-
-if($con->query($result1l)){
- 
-    header("Location: Famillyinone.php");
+if ($result1->num_rows == 1) {
+    $_SESSION['email'] = $useremail;
+    $utype = "CLIENT";
+    $_SESSION['usertype'] = $utype;
+    header('Location: client.php');
     exit();
+} 
 
-}
-
-if($con->query($result2)){
-  
-    header("Location: in.php");
+if ($result2->num_rows == 1) {
+    $_SESSION['email'] = $useremail;
+    $utype = "admin";
+    $_SESSION['usertype'] = $utype;
+    header('Location: in.php');
     exit();
-
-}
-else {
-    echo "<script>
-    alert('Invalid usermal or pasword');
-    </script>";
+} else {
+    
+    echo '<h1>Invalid username or password.</h1>';
 }
 
-$con -> close();
 
+$con->close();
 ?>
