@@ -86,7 +86,9 @@
         <label >Date of Birth:</label>
         <input type="date" id="date" name="date" >
         
-     
+        <label >NIC:</label>
+        <input type="text" id="nic" name="nic" >
+
         <label for='gender'>Gender:</label>
         <select id='gender' name='gender' required>
             <option value="">--Select Gender--</option>

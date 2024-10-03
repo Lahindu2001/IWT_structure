@@ -4,6 +4,7 @@ require 'config.php';
 
 $userId = $_GET["userid"];
 $userName = $_GET["name"];
+$userNIC = $_GET["nic"];
 $userDob  = $_GET["date"];
 $userGender = $_GET["gender"];
 $userphoneNo = $_GET["phone"];
@@ -13,13 +14,13 @@ $userPassword  = $_GET["password"];
 $userplanetype  = $_GET["planetype"];
 $usertype  = $_GET["usertype"];
 
-if(empty($userName)||empty($userDob)||empty($userGender)||empty($userphoneNo)||empty($userAdress)||empty($userGmail)||empty($userplanetype)||empty($usertype)){
+if(empty($userName)||empty($userNIC)||empty($userDob)||empty($userGender)||empty($userphoneNo)||empty($userAdress)||empty($userGmail)||empty($userplanetype)||empty($usertype)){
     echo "all requried";
 }
 else{
 
   
-$sql = "UPDATE userdetail set userId='$userId' , name='$userName' , dob ='$userDob' ,gender= '$userGender', phoneNo= '$userphoneNo' , address = '$userAdress' , email='$userGmail' , planeType='$userplanetype' , usertype='$usertype'   WHERE userId='$userId'";
+$sql = "UPDATE userdetail set userId='$userId' , name='$userName' ,nic = '$userNIC', dob ='$userDob' ,gender= '$userGender', phoneNo= '$userphoneNo' , address = '$userAdress' , email='$userGmail' , planeType='$userplanetype' , usertype='$usertype'   WHERE userId='$userId'";
 
 if($con->query($sql))
 {

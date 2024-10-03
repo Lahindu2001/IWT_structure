@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-
+<?php  include ('hedder.php') ; ?> 
     <div class="sqr">
 
         <img class="image" src="src/asserts/images/logo.png" width = "60px" height="60px">
@@ -35,6 +35,6 @@
         </form>
 
     </div>
-    
+<?php include('footer.php')
 </body>
 </html>

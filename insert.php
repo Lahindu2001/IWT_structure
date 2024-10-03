@@ -31,6 +31,7 @@
     
     $name = $_POST["name"];
     $userDob  = $_POST["date"];
+    $NIC = $_POST["nic"];
     $userGender = $_POST["gender"];
     $userphoneNo = $_POST["phone"];
     $userAdress  = $_POST["address"];
@@ -40,9 +41,10 @@
     $userplanetype  = $_POST["planetype"];
     $usertype = $_POST["usertype"];
 
-   $sql = "INSERT INTO userdetail VALUES ('','$name','$userDob','$userGender' , '$userphoneNo' ,'$userAdress','$userGmail','$userPassword','$userconformPassword','$userplanetype' ,'$usertype')";
+    $sql = "INSERT INTO userdetail VALUES ('','$name' ,'$NIC','$userDob','$userGender' , '$userphoneNo' ,'$userAdress','$userGmail','$userPassword','$userconformPassword','$userplanetype' ,'$usertype')";
 
-   if($con->query($sql)){
+    if($con->query($sql)){
+     
     
     echo "<script>
  alert('succesful done');

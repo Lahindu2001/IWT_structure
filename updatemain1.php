@@ -75,7 +75,7 @@
 
     $nic =$_POST["update"];
 
-    $sql = "SELECT userId,name,dob,gender,phoneNo,address,email,password,planeType,usertype from userdetail where userId ='$nic'";
+    $sql = "SELECT userId,name,nic,dob,gender,phoneNo,address,email,password,planeType,usertype from userdetail where userId ='$nic'";
    
 
     $result =$con->query($sql);
@@ -83,6 +83,7 @@
             
            $userId = $row["userId"];
             $userName = $row["name"];
+            $userNIC = $row["nic"];
             $userDob  = $row["dob"];
             $userGender = $row["gender"];
             $userphoneNo = $row["phoneNo"];
@@ -95,7 +96,7 @@
 
             
      echo"      
-    <fieldset>
+   <fieldset>
         <legend>update customer Deatil</legend>
         <form  method ='get' action ='update_1.php' onsubmit='return validateForm()'>
 
@@ -103,6 +104,10 @@
 
         <label >Name:</label>
         <input type='text' id='name' name='name' value='$userName'>
+
+        
+        <label >NIC:</label>
+        <input type='text' id='nic' name='nic' value='$userNIC'>
 
         <label >Date of Birth:</label>
         <input type='date' id='date' name='date' value='$userDob'>

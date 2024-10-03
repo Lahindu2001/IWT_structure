@@ -35,20 +35,19 @@
         $Searchkey = trim($_POST['search']);  
 
         $Searchkey = $Searchkey . '%'; 
-        $sql = $con->prepare("SELECT * FROM userdetail WHERE name LIKE '$Searchkey' or userId LIKE '$Searchkey'");
+        $sql = $con->prepare("SELECT * FROM userdetail WHERE nic LIKE '$Searchkey' or userId LIKE '$Searchkey'");
        
-
         $sql->execute();
         $result = $sql->get_result();
 
        
         if ($result->num_rows > 0) {
             echo "<table border='1'>";
-            echo "<tr><th>User ID</th><th>Name</th><th>Date of Birth</th><th>Gender</th><th>Phone Number</th><th>Address</th><th>Email</th><th>Plan Type</th><th>Status</th></tr>";
+            echo "<tr><th>User ID</th><th>Name</th><th>NIC</th><th>Date of Birth</th><th>Gender</th><th>Phone Number</th><th>Address</th><th>Email</th><th>Plan Type</th><th>Status</th></tr>";
 
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>".$row["userId"]."</td><td>".$row["name"]."</td><td>".$row["dob"]."</td><td>".$row["gender"]."</td><td>".$row["phoneNo"]."</td><td>".$row["address"]."</td><td>".$row["email"]."</td><td>".$row["planeType"]."</td>";
+                echo "<td>".$row["userId"]."</td><td>".$row["name"]."</td><td>".$row["nic"]."</td><td>".$row["dob"]."</td><td>".$row["gender"]."</td><td>".$row["phoneNo"]."</td><td>".$row["address"]."</td><td>".$row["email"]."</td><td>".$row["planeType"]."</td>";
                 echo "<td>
                         <form action='deleted1.php' method='POST'>
                             <input type='hidden' name='delete' value='" . $row["userId"] . "'>

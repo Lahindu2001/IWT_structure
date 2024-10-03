@@ -3,37 +3,48 @@
 
 <head>
     <title>branch network</title>
-    <link rel="stylesheet" href="src/asserts\css\payment.css">
+    <link rel="stylesheet" href="src/asserts/css/payment.css">
     <meta charset="UTF-8">
 
 
-    <style> header {
-    background-image: url('src/asserts/images/payment.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 20px;
+    <style> 
+.heade_cont {
     text-align: center;
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    color:#9e9a9a  ;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px #151010;
+    font-size: 40px;
+    z-index: 1;
+    font-family:Raleway;
+
+}
+
+.back_im img {
+    height: 70vh;
+    width:100%;
+    filter: blur(2px);
+    z-index: 0;
+
 }
 </style>
 </head>
 
 <body>
-<nav>
+
 <?php  include ('hedder.php') ;  ?>
 
-    <header styele="background-image:url('src/asserts/images/payment.jpg');" >
-        <h1>Flexible Payment Options</h1>
-        <p>We offer various payment methods to suit your preferences and make paying premiums easy.</p>
-    </header>
+<div class="heade_cont">
+<h1>Flexible Payment Options</h1>
+<p>We offer various payment methods to suit your preferences and make paying premiums easy.</p>
 
-   
+</div>
+<div class="back_im">
+    <img  src="src/asserts/images//payment.jpg" alt="img">
+</div>
+  
 <br>
     <div class = "g1">
         <h1>Pay through AIA QuickPay or AIA Customer Portal</h1>
