@@ -36,10 +36,19 @@
    $employdob  = $_POST["date"];
    $employAdress  = $_POST["address"];
    $employNIC  = $_POST["nic"];
-   $employAdminId  = $_POST["adminId"];
 
+ 
+   session_start();
+   if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'ADMIN') {
+      $na =  htmlspecialchars($_SESSION['name']) ;
+      
+      
+   } else {
+       header('Location: login.php');
+       exit();
+   }
 
-   $sql = "INSERT INTO employee VALUES ('','$employName','$employEmail','$employpassword' , '$employdob' ,'$employAdress' , '$employNIC' ,'$employAdminId ' )";
+   $sql = "INSERT INTO employee VALUES ('','$employName','$employEmail','$employpassword' , '$employdob' ,'$employAdress' , '$employNIC' ,'$na' )";
    
    if($con->query($sql)){
     echo "<script>

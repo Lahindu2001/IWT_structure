@@ -3,21 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/asserts/css/hedderfoteer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+          .user_name{
+        float: right;
+        margin-top: 5px;
+        margin-right: 50px;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        background-color: #007bff;
+    }
+    
+    .user_name p{
+   
+        font-weight: bold;
+        font-size: 19px;
+
+    }
+
+.ancor a{
+  text-decoration: none;
+
+}
+
+</style>
 </head>
 <body>
-    <p>hi i am client</p>
-    </div>
-  <div class="delete">
-    <form action="delete.php">  
-      <input type="submit" value="Delete Account" onclick="confirmDelete()">
-    </form>
-    <form action="account.php">
-      <input type="submit" value="Edit">
-    </form>
-    <form action="logout.php" method="post"> 
-        <input name="logoff" type="submit" value="Logout" onclick="logoff()" > 
-    </form>
-  </div>
+<?php  include ('hedder.php') ;  ?>
+             
 </body>
 </html>

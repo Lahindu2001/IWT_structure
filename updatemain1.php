@@ -117,6 +117,7 @@
         <select id='gender' name='gender' required value='$userGender'>
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
+             <option value='other'>Other</option>
         </select>
 
         <label >Phone:</label>
@@ -125,7 +126,7 @@
         <label >Address:</label>
         <input type='text' id='address' name='address' value='$userAdress'>
 
-        <label >Email:</label>
+        <label >Eamil:</label>
         <input type='email' id='email' name='email' value='$userGmail'>
 
     

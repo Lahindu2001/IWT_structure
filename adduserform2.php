@@ -98,16 +98,7 @@
             <option value="LEVEL_3">LEVEL 3</option>
         </select>
 
-        <label for="adminId">admin Id:</label>
-        <select id="adminId" name="adminId">
-        <option value="">--Select admin--</option>
-            <option value="Admin 1">ADMIN 1</option>
-            <option value="Admin 2">ADMIN 2</option>
-            <option value="Admin 3">ADMIN 3</option>
-            <option value="Admin 1">ADMIN 4</option>
-            <option value="Admin 2">ADMIN 5</option>
-       
-        </select>
+
 
         <input type="submit" value="Submit">
         <input type="reset" value="reset">

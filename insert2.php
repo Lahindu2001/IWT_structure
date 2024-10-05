@@ -27,16 +27,24 @@
 <body>
     <?php
     require 'config.php';
-    
-
+   
    $userId  = $_POST["userId"];
    $clamamount  = $_POST["amount"];
    $clamdiscription  = $_POST["claimDescription"];
    $clamdate  = $_POST["date"];
    $clamstatus  = $_POST["status"];
-   $adminId  = $_POST["adminId"];
-
-
+   
+  
+   session_start();
+   if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'ADMIN') {
+    $adminId  =   htmlspecialchars($_SESSION['name']) ;
+    
+   
+   } else {
+       header('Location: login.php');
+       exit();
+   }
+ 
    $sql = "INSERT INTO claim VALUES ('','$userId','$clamamount','$clamdiscription' , '$clamdate' ,'$clamstatus' , '$adminId')";
 
    if($con->query($sql)){

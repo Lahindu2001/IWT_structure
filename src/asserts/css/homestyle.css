@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+nav {
+  padding: 1.5rem 1rem;
+  background-color: aliceblue;
+  ;
+}
+
+nav .navlinks img {
+  width: 100px;
+  height: auto;
+}
+
+nav .navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .navlinks a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: black;
+  transition: color 0.3s;
+}
+
+nav .navlinks a:hover {
+  color: #007bff;
+}
+
+.plan-section button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.plan-category {
+  padding-top: 50px;
+  width: 270px;
+  display: none;
+  background-color: aliceblue;
+  opacity: 0.9;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.plan-section {
+  position: relative;
+}
+
+.plan-section:hover .plan-category {
+  display: block;
+}
+
+.plan-category a {
+  display: block;
+  margin: 5px 0;
+  padding-bottom: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.plan-category a:hover {
+  text-decoration: underline;
+}
+
+
+
+#signinBtn,
+#loginBtn {
+  margin-left: 20px;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 19px;
+}
+
+#signinBtn:hover,
+#loginBtn:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.coverimage img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+/*category section styling*/
+
+.productCat {
+  text-align: center;
+  margin-top: 7rem;
+  padding: 0 50px;
+}
+
+.productCat h1 {
+  color: rgb(25, 93, 153);
+  font-size: 65px;
+}
+
+#headPara {
+  margin: 80px 0;
+  text-align: justify;
+}
+
+.catSection {
+  margin-top: 2rem;
+  display: flex;
+  gap: 50px;
+
+}
+
+.catSection img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.3));
+
+}
+
+.catSection p {
+  text-align: justify;
+}
+
+.catSection h3 {
+  margin: 30px 0;
+}
+
+#seeMoreBtn {
+  margin-left: 20px;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 19px;
+  margin-top: 40px;
+}
+
+#seeMoreBtn:hover {
+  background-color: azure;
+  color: #007bff;
+}
+
+
+
+/*Customer Testimonials section*/
+
+.headerTestimonials {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  color: rgb(25, 93, 153);
+  font-size: 65px;
+  text-align: center;
+}
+
+.testimonials {
+
+  display: flex;
+  gap: 50px;
+  padding: 0 50px;
+  background-color: aliceblue;
+  padding-top: 2rem;
+}
+
+.review img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));
+}
+
+.review {
+  display: block;
+  text-align: center;
+  gap: 25px;
+  text-align: center;
+}
+
+.review h4,
+p {
+  margin: 20px 0;
+}
+
+.review {
+  margin-top: 25px;
+}
+
+.fa-star {
+  color: gold;
+}
+
+.fa-regular.fa-star {
+  color: lightgray;
+}
+
+
+
+/*sign With us */
+
+.joinUs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+.sec1 img {
+  max-width: 100%;
+  height: auto;
+  padding: 5%;
+  border-radius: 50px;
+  filter: drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));
+}
+
+.sec2 {
+  padding: 20px;
+  width: 900px;
+}
+
+.sec2 h1 {
+  font-size: 50px;
+  color: rgb(25, 93, 153);
+}
+
+.sec2 button {
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 19px;
+}
+
+.sec2 button:hover {
+  background-color: azure;
+  color: #007bff;
+}
+
+#MeetAgentBtn {
+  background-color: #11cece;
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  padding: 0.7rem 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #11cece;
+  font-weight: bold;
+}
+
+
+#MeetAgentBtn:hover {
+  background-color: azure;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+
+
+/*gallery content section*/
+
+.galleryHead {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(25, 93, 153);
+  margin: 7rem 0 3rem 0;
+}
+
+.GalleryCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  gap: 2rem;
+  padding: 0 15rem;
+}
+
+.GalleryCont img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 02%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.GalleryCont img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Footer style */
+
+footer {
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: aliceblue;
+  justify-content: space-evenly;
+}
+
+.leftImg img {
+  width: 200px;
+  height: auto;
+}
+
+
+.footNavLinks {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footNavLinks a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.social {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.rightCont p {
+  text-align: center;
+  width: 783px;
+}
+
+.lastcont {
+  display: flex;
+}
+
+.lastcont p {
+  text-align: right;
+  width: 280px;
+  margin-left: 80px;
+  cursor: pointer;
+}

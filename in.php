@@ -2,47 +2,22 @@
 <html>
 
 <head>
-    <title>Admin</title>
-    <link rel="stylesheet" href="src\asserts\css\in.css">
-    <script src="in.js"></script>
-    <style>.btn-logout{
-        background-color: #dc3545;
-        padding: 10px 25px;
-        font-size: 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        color: white;
-        margin: 0;
-    } </style>
+    
 </head>
 
 <body>
+<?php  include ('admin_header.php') ;  ?>
+<ul class="navi">
+    <li><a href="in.php" style="background-color: #cfcfcf;">Dashboard</a></li>
+    <li><a href="table1.php">Manage Users</a></li>
+    <li><a href="table2.php">Manage Claim</a></li>
+    <li><a href="table3.php">Manage Employees</a></li>
+    <li><a href="table4.php">Manage Meeting</a></li>
+    <li><a href="table5.php">Manage Customer Request</a></li>
+    <li style="float:right"><form action="adminlogout.php" method="POST">
+     <input name="Adminlogout" type="submit" value="Log Out" class="btn-logout">
+    </form></li></ul>
 
-    <div class="header">
-        <center> <img src="src\asserts\images\logo.png" alt="logo" width="120px" length="120px"> </center>
-        <h1 >Admin Dashboard - Life Insurance Management System </h1>
-        <script>document.write(Date());</script>
-        <h4>Welcome, Admin</h4>
-
-        
-        <form action="adminlogout.php" method="POST">
-	      <input name="Adminlogout" type="submit" value="Log Out" class='btn-logout'>
-	    </form> 
-       
-
-    </div>
-
-
-    <div class="scrollmenu" >
-        <a href="in.php"> Dashboard</a>
-        <a href="table1.php" > Manage Users</a>
-        <a href="table2.php"> Manage Claim</a>
-        <a href="table3.php"> Manage Employees</a>
-        <a href="table4.php"> Manage meeting</a>
-        <a href="table5.php"> Manage custormer reqest</a>
-        <a href="in.php"> Settings</a>
-        
-    </div>
 
 
     <div class="main-content1">

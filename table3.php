@@ -2,55 +2,22 @@
 <html>
 
 <head>
-    <title>Admin</title>
-    <link rel="stylesheet" href="src\asserts\css\in.css">
-    <script src="in.js"></script>
-    <style> .subbut {
-        padding: 10px 20px;
-        background-color: rgb(0, 179, 220);
-        color: rgb(86, 86, 82);
-        border: none;
-        border-radius: 5px;
-        font-size: 15px;
-        cursor: pointer;
-    } 
-    .btn-logout{
-        background-color: #dc3545;
-        padding: 10px 25px;
-        font-size: 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        color: white;
-        margin: 0;
-    }  </style>
+  
 </head>
 
 <body>
 
-    <div class="header">
-        <center> <img src="src/asserts/images/logo.png" alt="logo" width="100px" length="100px"> </center>
-        <h1 >Admin Dashboard - Life Insurance Management System </h1>
-        <script>document.write(Date());</script>
-        <h4>Welcome, Admin</h4>
-         
-        <form action="adminlogout.php" method="POST">
-	      <input name="Adminlogout" type="submit" value="Log Out" class='btn-logout'>
-	    </form> 
-       
-    </div>
-
-
-    <div class="scrollmenu" >
-        <a href="in.php"> Dashboard</a>
-        <a href="table1.php" > Manage Users</a>
-        <a href="table2.php"> Manage Claim</a>
-        <a href="table3.php" style="background-color:#220676"> Manage Employees</a>
-        <a href="table4.php"> Manage meeting</a>
-        <a href="table5.php"> Manage custormer reqest</a>
-        <a href="in.php"> Settings</a>
-        <a href="#"> Logout</a>
-    </div>
-
+<?php  include ('admin_header.php') ;  ?>
+<ul class="navi">
+    <li><a href="in.php">Dashboard</a></li>
+    <li><a href="table1.php" >Manage Users</a></li>
+    <li><a href="table2.php" >Manage Claim</a></li>
+    <li><a href="table3.php" style="background-color: #cfcfcf;">Manage Employees</a></li>
+    <li><a href="table4.php">Manage Meeting</a></li>
+    <li><a href="table5.php">Manage Customer Request</a></li>
+    <li><form action="adminlogout.php" method="POST">
+     <input name="Adminlogout" type="submit" value="Log Out" class="btn-logout">
+    </form></li></ul>
 
     <div class="main-content">
 

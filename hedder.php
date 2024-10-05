@@ -15,30 +15,70 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+          .user_name{
+        float: right;
+        margin-top: 10px;
+        margin-right: 50px;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        background-color: #007bff;
+    }
+    
+    .user_name p{
+   
+        font-weight: bold;
+        font-size: 19px;
+
+    }
+
+.ancor a{
+  text-decoration: none;
+
+}
+</style>
 </head>
 <body>
-    <nav>
-        <div class="navlinks">
-          <img src="src/asserts/images/logo.png">
-          <a href="#">Home</a>
-          <div class="plan-section">
-            <button id="planBtn">Insurance Plans</button>
-            <div class="plan-category">
-              <a href="#">Emergency Coverage</a>
-              <a href="#">Complete Coverage</a>
-              <a href="#">Family all-in-one</a>
-              <a href="#">Elder Citizense</a>
-            </div>
-    
-          </div>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-          <div class="sub-log-Btn">
-            <button id="signinBtn">Sign In</button>
-            <button id="loginBtn">Log In</button>
-          </div>
+<nav>
+    <div class="navlinks">
+      <img src="src/asserts/images/logo.png">
+      <a href="#">Home</a>
+      <div class="plan-section">
+        <button id="planBtn">Insurance Plans</button>
+        <div class="plan-category">
+          <a href="#">Emergency Coverage</a>
+          <a href="#">Complete Coverage</a>
+          <a href="#">Family all-in-one</a>
+          <a href="#">Elder Citizense</a>
         </div>
-      </nav>
-    
+
+      </div>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <?php
+              require 'config.php';
+              if (isset($_SESSION['email'])) {
+                echo "Logged in as: " .($_SESSION['name']) . "<br>";
+            } else {
+              echo "<form action='adminlogout.php' method='POST'>
+               <button id='signinBtn' name='Adminlogout' type='submit' >Sign Out</button> </form>";
+          }?>
+      <?php  
+             require 'config.php';
+              session_start();
+              if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'CLIENT') {
+                  echo "<P> WELCOME ,<br> ". htmlspecialchars($_SESSION['email']) ."</p>";
+              } else {
+                  header('Location: login.php');
+                  exit();
+              }        
+
+          ?>     
+      </div>
+    </div>
+  </nav>
+
+  
 </body>
+
 </html>

@@ -97,17 +97,6 @@
         <label >NIC:</label>
         <input type="text" id="nic" name="nic" >
 
-        <label for="adminId">admin Id:</label>
-        <select id="adminId" name="adminId">
-        <option value="">--Select admin--</option>
-            <option value="Admin 1">ADMIN 1</option>
-            <option value="Admin 2">ADMIN 2</option>
-            <option value="Admin 3">ADMIN 3</option>
-            <option value="Admin 2">ADMIN 4</option>
-            <option value="Admin 3">ADMIN 5</option>
-        </select>
-
-    
         <input type="submit" value="Submit">
         <input type="reset" value="reset">
         </form>

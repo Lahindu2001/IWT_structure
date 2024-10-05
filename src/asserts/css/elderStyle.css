@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+nav {
+  padding: 1.5rem 1rem;
+  background-color: aliceblue;
+  ;
+}
+
+nav .navlinks img {
+  width: 100px;
+  height: auto;
+}
+
+nav .navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .navlinks a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: black;
+  transition: color 0.3s;
+}
+
+nav .navlinks a:hover {
+  color: #007bff;
+}
+
+.plan-section button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.plan-category {
+  padding-top: 50px;
+  width: 270px;
+  display: none;
+  background-color: aliceblue;
+  opacity: 0.9;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.plan-section {
+  position: relative;
+}
+
+.plan-section:hover .plan-category {
+  display: block;
+}
+
+.plan-category a {
+  display: block;
+  margin: 5px 0;
+  padding-bottom: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.plan-category a:hover {
+  text-decoration: underline;
+}
+
+
+
+#signinBtn,
+#loginBtn {
+  margin-left: 20px;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 19px;
+}
+
+#signinBtn:hover,
+#loginBtn:hover {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.coverimage img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+
+.banner img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner h1 {
+  text-align: center;
+  font-size: 75px;
+  position: absolute;
+  top: 200px;
+  left: 460px;
+  color: #007bff;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+
+/*plans section*/
+
+
+.topicForPlans {
+  text-align: center;
+  font-size: 70px;
+  color: #007bff;
+  margin-top: 5rem;
+}
+
+.plansType {
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.cont {
+  text-align: center;
+  background-color: #d7dade;
+  margin: 1.5rem;
+  box-sizing: border-box;
+  max-width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5%;
+}
+
+.cont img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  padding: 0.9rem;
+  border-radius: 20px;
+}
+
+.cont p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.cont h2,
+p {
+  margin: 1rem 0.2rem;
+}
+
+
+/*plan describ */
+
+
+.mainCont {
+  padding: 1rem;
+}
+
+.contInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+}
+
+.contInner img {
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  margin: 0 4rem;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.contInner .description {
+  width: 500px;
+  text-align: justify;
+}
+
+.contInner h1 {
+  font-size: 75px;
+  color: #007bff;
+}
+
+
+/* Footer style */
+
+footer {
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: aliceblue;
+  justify-content: space-evenly;
+}
+
+.leftImg img {
+  width: 200px;
+  height: auto;
+}
+
+
+.footNavLinks {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footNavLinks a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.social {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.rightCont p {
+  text-align: center;
+  width: 783px;
+}
+
+.lastcont {
+  display: flex;
+}
+
+.lastcont p {
+  text-align: right;
+  width: 280px;
+  margin-left: 80px;
+  cursor: pointer;
+}
