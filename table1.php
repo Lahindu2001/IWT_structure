@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    
+<link rel="stylesheet" href="src\asserts\css\in.css">
+
 </head>
 <body>
 <?php  include ('admin_header.php') ;  ?>
@@ -23,13 +24,9 @@
 
         <div class="search-bar">
         <form action="search1.php" method="POST">
-        <input type="text" name='search' value = "" placeholder = "search user name / userid">
+        <input type="text" name='search' value = "" placeholder = "search user name / userid / NIC">
         <button class = "subbut" input type='submit' value='search'>search</button>
         </form></div>
-
-
-
-
 
         <div class="section">
             <br>

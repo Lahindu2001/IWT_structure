@@ -6,24 +6,26 @@
     <script src="in.js"></script>
 </head>
 <body>
-    <div class="header">
-        <center><img src="src/asserts/images/logo.png" alt="logo" width="100px" length="100px"></center>
-        <h1>Admin Dashboard - Life Insurance Management System</h1>
-        <script>document.write(Date());</script>
-        <h4>Welcome, Admin</h4>
-    </div>
+    <?php  include ('admin_header.php') ;  ?>
 
-    <div class="scrollmenu">
-        <a href="in.php">Dashboard</a>
-        <a href="table1.php" style="background-color:#220676">Manage Users</a>
-        <a href="table2.php">Manage Claim</a>
-        <a href="table3.php">Manage Employees</a>
-        <a href="table4.php">Manage meeting</a>
-        <a href="table5.php" >Manage customer request</a>
-        <a href="in.php">Settings</a>
-        <a href="#">Logout</a>
-    </div>
+<ul class="navi">
+    <li><a href="in.php">Dashboard</a></li>
+    <li><a href="table1.php" style="background-color: #cfcfcf;">Manage Users</a></li>
+    <li><a href="table2.php">Manage Claim</a></li>
+    <li><a href="table3.php">Manage Employees</a></li>
+    <li><a href="table4.php">Manage Meeting</a></li>
+    <li><a href="table5.php">Manage Customer Request</a></li>
+    <li><form action="adminlogout.php" method="POST">
+     <input name="Adminlogout" type="submit" value="Log Out" class="btn-logout">
+    </form></li></ul>
 
+    <div class="search-bar">
+        <form action="search1.php" method="POST">
+        <input type="text" name='search' value = "" placeholder = "search user name / userid / NIC">
+        <button class = "subbut" input type='submit' value='search'>search</button>
+        </form></div>
+
+        
     <?php
     require 'config.php';
 
@@ -35,7 +37,7 @@
         $Searchkey = trim($_POST['search']);  
 
         $Searchkey = $Searchkey . '%'; 
-        $sql = $con->prepare("SELECT * FROM userdetail WHERE nic LIKE '$Searchkey' or userId LIKE '$Searchkey'");
+        $sql = $con->prepare("SELECT * FROM userdetail WHERE nic LIKE '$Searchkey' or userId LIKE '$Searchkey' or name LIKE '$Searchkey'");
        
         $sql->execute();
         $result = $sql->get_result();

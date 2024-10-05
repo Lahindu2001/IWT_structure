@@ -8,7 +8,16 @@ $clamamount  = $_GET["amount"];
 $clamdiscription  = $_GET["claimDescription"];
 $clamdate  = $_GET["date"];
 $clamstatus  = $_GET["status"];
-$adminId  = $_GET["adminId"];
+
+session_start();
+if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'ADMIN') {
+ $adminId  =   htmlspecialchars($_SESSION['name']) ;
+ 
+
+} else {
+    header('Location: login.php');
+    exit();
+}
 
 if(empty($clamId)||empty($userId)||empty($clamamount)||empty($clamdiscription)||empty($clamdate)||empty($clamstatus)||empty($adminId)){
     echo "all requried";

@@ -19,10 +19,8 @@
           .user_name{
         float: right;
         margin-top: 10px;
-        margin-right: 50px;
-        border-radius: 5px;
-        border: 1px solid #007bff;
-        background-color: #007bff;
+        margin-right: 5px;
+      
     }
     
     .user_name p{
@@ -41,39 +39,45 @@
 <body>
 <nav>
     <div class="navlinks">
-      <img src="src/asserts/images/logo.png">
-      <a href="#">Home</a>
+    <a href="HomePage.php"><img src="src/asserts/images/logo.png"></a>
+      <a href="HomePage.php">Home</a>
       <div class="plan-section">
         <button id="planBtn">Insurance Plans</button>
         <div class="plan-category">
-          <a href="#">Emergency Coverage</a>
-          <a href="#">Complete Coverage</a>
-          <a href="#">Family all-in-one</a>
-          <a href="#">Elder Citizense</a>
+          <a href="emargency.php">Emergency Coverage</a>
+          <a href="completePlan.php">Complete Coverage</a>
+          <a href="Famillyinone.php">Family all-in-one</a>
+          <a href="ElderPlan.php">Elder Citizense</a>
         </div>
 
       </div>
       <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+      <a href="24assi.php">Contact Us</a>
+      <a href="FAQ_PAGE.php">FAQ</a>
       <?php
-              require 'config.php';
-              if (isset($_SESSION['email'])) {
-                echo "Logged in as: " .($_SESSION['name']) . "<br>";
-            } else {
-              echo "<form action='adminlogout.php' method='POST'>
-               <button id='signinBtn' name='Adminlogout' type='submit' >Sign Out</button> </form>";
-          }?>
-      <?php  
-             require 'config.php';
-              session_start();
-              if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'CLIENT') {
-                  echo "<P> WELCOME ,<br> ". htmlspecialchars($_SESSION['email']) ."</p>";
-              } else {
-                  header('Location: login.php');
-                  exit();
-              }        
+            session_start();
+            require 'config.php';
 
-          ?>     
+            // Check if the user is logged in
+            if (isset($_SESSION['email']) && isset($_SESSION['name'])) {
+              // Display the name and email
+              echo "<div class='user_name'>
+                      <p>WELCOME, <a href='#'>". htmlspecialchars($_SESSION['name']) ."<br>" .htmlspecialchars($_SESSION['email'])."</p</a>>
+                    </div>";
+              
+              echo "<form action='adminlogout.php' method='POST'>
+                      <button id='loginBtn' name='Adminlogout' type='submit'>Logout</button>
+                    </form>";
+          } else {
+                echo "<form action='login.php' method='POST'>
+                        <button id='loginBtn' type='submit'>Sign In</button>
+                      </form>";
+
+                echo "<form action='signup.php' method='GET'>
+                        <button id='loginBtn' type='submit'>Sign Up</button>
+                      </form>";
+            }
+            ?>
       </div>
     </div>
   </nav>

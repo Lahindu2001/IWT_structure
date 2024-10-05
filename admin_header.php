@@ -46,11 +46,11 @@
 <?php
         require 'config.php';
         session_start();
-        if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'ADMIN') {
-           $na =  htmlspecialchars($_SESSION['name']) ;
-            echo "<P> WELCOME , ADMIN : " .$na." </p>";
-            echo "<p>" . htmlspecialchars($_SESSION['email']) ."</p>";
-        } else {
+       
+if (isset($_SESSION['email']) && $_SESSION['usertype'] === 'ADMIN') {
+    echo "<p> WELCOME, ADMIN: " . htmlspecialchars($_SESSION['name']) . "</p>";
+    echo "<p>" . htmlspecialchars($_SESSION['email']) . "</p>";
+} else {
             header('Location: login.php');
             exit();
         }        

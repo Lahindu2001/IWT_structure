@@ -18,14 +18,15 @@
       
   <footer>
     <div class="leftImg">
-      <img src="src/asserts/images/logo.png" alt="">
+    <a href="HomePage.php"><img src="src/asserts/images/logo.png"></a>
     </div>
     <div class="rightCont">
       <div class="footNavLinks">
-        <a href="#">Home</a>
+        <a href="HomePage.php">Home</a>
         <a href="#">Insurance Plans</a>
         <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="24assi.php">Contact Us</a>
+        <a href="FAQ_PAGE.php">FAQ</a>
       </div>
       <p>Life insurance supports your family with money if you pass away. How Insurance Works You pay a small amount of
         money regularly, called a premium, to the insurance company. Many people do this, and the company collects a lot

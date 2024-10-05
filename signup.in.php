@@ -13,8 +13,8 @@ if (isset($_POST['submit'])) {
     $phoneNo = mysqli_real_escape_string($con, $_POST['phoneNo']);
     $address = mysqli_real_escape_string($con, $_POST['address']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $password = mysqli_real_escape_string($con, $_POST['password']);
-    $confirm_password = mysqli_real_escape_string($con, $_POST['confirmpassword']);
+    $passwodr = ($_POST['password']);
+    $confirm_password =($_POST['confirmpassword']);
     $planType = mysqli_real_escape_string($con, $_POST['planeType']);
     $usertype = mysqli_real_escape_string($con, $_POST['usertype']); // Pre-defined as CLIENT
 
@@ -44,9 +44,7 @@ if (isset($_POST['submit'])) {
         exit();
     }
 
-    // Hash the password before storing it
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
+    
     // Insert new user into the database
     $sql = "INSERT INTO userdetail (name, nic, dob, gender, phoneNo, address, email, password, planeType, usertype) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
@@ -56,7 +54,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Bind and execute the statement for inserting data
-    mysqli_stmt_bind_param($stmt, "ssssssssss", $name, $nic, $dob, $gender, $phoneNo, $address, $email, $hashedPassword, $planType, $usertype);
+    mysqli_stmt_bind_param($stmt, "ssssssssss", $name, $nic, $dob, $gender, $phoneNo, $address, $email, $passwodr, $planType, $usertype);
     mysqli_stmt_execute($stmt);
 
     // Redirect to a success page after signup

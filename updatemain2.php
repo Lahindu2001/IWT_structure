@@ -115,20 +115,9 @@
          <br>
         <label for='status'>status:</label>
         <select id='status' name='status' required value='$claimStatus'>
-            <option value=''>---select level---</option>
             <option value='LEVEL_1'>LEVEL 1</option>
             <option value='LEVEL_2'>LEVEL 2</option>
             <option value='LEVEL_3'>LEVEL 3</option>
-        </select>
-
-        <label for='adminId'>admin Id:</label>
-        <select id='adminId' name='adminId' value='$adminId'>
-            <option value=''>---select level---</option>
-            <option value='Admin 1'>ADMIN 1</option>
-            <option value='Admin 2'>ADMIN 2</option>
-            <option value='Admin 3'>ADMIN 3</option>
-             <option value='Admin 4'>ADMIN 2</option>
-            <option value='Admin 5'>ADMIN 3</option>
         </select>
 
         <input type='submit' value='Submit'>

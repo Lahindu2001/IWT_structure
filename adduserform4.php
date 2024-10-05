@@ -121,8 +121,12 @@
         <label >Time to meeting:</label>
         <input type="time" id="time" name="time" >
 
-        <label >Location:</label>
-        <input type="text" id="location" name="location" >
+        <label>Location of Meeting</label>
+        <select id="location" name="location" required>
+          <option value="">Select</option>
+          <option value="home">Home</option>
+          <option value="branch">Nearest Branch</option>
+        </select>
 
         <label >Reson:</label>
         <input type="text" id="reson" name="reson" >

@@ -1,10 +1,6 @@
-
 <?php
-    session_start();
-
-
-if(isset($_POST["logoff"])){
-    session_destroy();     
-    header("Location:emargency.php"); 
-}
-?> 
+session_start();
+session_destroy();  // Destroy all session data
+header("Location: HomePage.php");
+exit();
+?>
