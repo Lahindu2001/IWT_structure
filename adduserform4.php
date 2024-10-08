@@ -74,7 +74,7 @@
     require 'config.php';
 ?>
 
-        <form  method ="post" action ="insert4.php">
+        <form  method ="post" action ="insert4.php" onsubmit="return validateForm()">
         <h1>meeting Information</h1>
         
         <label>First Name:</label>

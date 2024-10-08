@@ -4,7 +4,7 @@
   session_start();
 
   if(isset($_SESSION["email"])) { 
-    header("Location: Homepage.php");
+    header("Location: Index.php");
     }
 
 $email = $_POST['email'];
@@ -25,7 +25,7 @@ if ($result1->num_rows == 1) {
     $_SESSION['usertype'] = "CLIENT";
     $_SESSION['userid'] = $userData['id'];  // Assuming 'id' is the user ID column
     
-    header('Location: HomePage.php');
+    header('Location: Index.php');
     exit();
 } 
 

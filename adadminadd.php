@@ -69,7 +69,7 @@
 <body>
    <div>
    <?php  include ('hedder.php') ;  
-     session_start();
+    ;
    ?></div>
     
     <div class="class1">

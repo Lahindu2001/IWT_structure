@@ -31,3 +31,42 @@
     margin: 10px;
 }
 
+.heade_cont {
+    text-align: center;
+    color:#FFFACD  ;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 45px;
+    z-index: 1;
+    font-family:Raleway;
+
+}
+
+.back_im img {
+    height: 70vh;
+    width:100%;
+    filter: blur(2px);
+    z-index: 0;
+
+}
+
+.but a {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    background-color: rgb(0, 179, 220);
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.but a:hover {
+    background-color: rgb(44, 175, 164);
+}
+
+
+
+  

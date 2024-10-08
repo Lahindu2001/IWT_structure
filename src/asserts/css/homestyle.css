@@ -298,7 +298,6 @@ p {
 .GalleryCont {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 columns */
   gap: 2rem;
   padding: 0 15rem;
 }

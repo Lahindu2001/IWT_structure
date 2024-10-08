@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insurance Agent Meeting Form</title>
-  <link rel="stylesheet" href="src\asserts\css\styleForm.css">
+  <link rel="stylesheet" href="src/asserts/css/styleForm.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -24,7 +24,7 @@
 
   <div class="form-container">
     <h2>Insurance Agent Reservation Form</h2>
-    <form id="meeting-form" action="inserthas.php" method="POST">
+    <form id="meeting-form" action="insertHasaranga.php" method="POST">
       <div class="form-group">
         <label>First Name</label>
         <input type="text" id="first-name" name="cusFirstName" required>
@@ -79,7 +79,6 @@
       <div class="form-group">
         <label>Time of Meeting</label>
         <input type="time" id="meeting-time" name="custMeetTime" required>
-        <p id="redNote">Please make a reservation between 9am and 5pm on weekdays</p>
       </div>
       <div class="form-group">
         <label>Location of Meeting</label>
@@ -94,16 +93,16 @@
         <input type="text" id="meeting-reason" name="custMeetReason" required>
       </div>
       <div class="form-group">
-        <button type="submit" onclick="validateForm()">Submit</button>
+        <button type="submit">Submit</button>
         <button type="reset">Reset Form</button>
+        <script src="src/asserts/js files/inputFormJavaScript.js"></script>
       </div>
     </form>
   </div>
 
   <a href="newTry.php" id="resUpdate">Update My reservation</a>
   <?php  include ('footer.php') ;  ?>
-  
-  <script src="src\asserts\js\mainForm.js"></script>
+
 </body>
 
 </html>

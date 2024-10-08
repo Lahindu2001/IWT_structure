@@ -73,7 +73,7 @@
     require 'config.php';
 ?>
 
-    <form  method ="post" action ="insert3.php">
+    <form  method ="post" action ="insert3.php" onsubmit="return validateForm()">
         <h1>employee Information</h1>
         <!--
         <label>employee ID:</label>

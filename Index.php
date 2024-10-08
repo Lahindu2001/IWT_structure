@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="src\asserts\css\homestyle.css">
+  <link rel="stylesheet" href="src/asserts/css/homestyle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,7 +17,9 @@
 </head>
 
 <body>
+  
 <?php  include ('hedder.php') ;  ?>
+
   <div class="coverimage">
     <img src="src/asserts/images/cover image.jpg" alt="">
   </div>
@@ -79,8 +81,10 @@
       </div>
 
     </div>
+  
 
-    <button id="seeMoreBtn">See More Details</button>
+    <!-- mekata adala script eka home ekema yata thiyenawa balanna -->
+    <button id="seeMoreBtn" onclick="LoadAllplanPage()">See More Details</button>
   </div>
 
   <h1 class="headerTestimonials">Our testimonials</h1>
@@ -155,7 +159,11 @@
       <p>"Navigating the website was smooth, and I appreciated the well-organized product pages. The variety of plans,
         especially the family and emergency coverage, were explained clearly. I felt reassured knowing I could find the
         right coverage quickly."</p>
-      <button>Join With Assure Life</button>
+
+        <!-- mekata adala script ekath pahala thiyenawa path eka danna balala -->
+      <button onclick="redirectToSignInpage()">Join With Assure Life</button>
+
+
       <a href="inputform.php" id="MeetAgentBtn">Meet Your Assure Agent</a>
     </div>
 
@@ -193,7 +201,23 @@
   </div>
 
 
+  
   <?php  include ('footer.php') ;  ?>
+
+
+  <!-- lahidu see more button eka ebuwama load wenna one page eke path eka denna histhenata  e kiyanne plan okkoma thiyen thena -->
+  <script>
+    function LoadAllplanPage()
+    {
+      window.location.href = ' ';
+    }
+
+    // lahidu join with assure life button eka ebuwama load wenna one page eke path eka denna histhenata  e kiyanne plan okkoma thiyen thena
+    function redirectToSignInpage()
+    {
+      window.location.href = ' ';
+    }
+  </script>
 </body>
 
 </html>

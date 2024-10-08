@@ -4,6 +4,6 @@
 
 if(isset($_POST["Adminlogout"])){
     session_destroy();     
-    header('Location:HomePage.php'); 
+    header('Location:Index.php'); 
 }
 ?> 

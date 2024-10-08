@@ -71,6 +71,7 @@
 <body>
     
 <?php 
+
     require 'config.php';
 
     $nic =$_POST["update"];

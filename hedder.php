@@ -39,8 +39,8 @@
 <body>
 <nav>
     <div class="navlinks">
-    <a href="HomePage.php"><img src="src/asserts/images/logo.png"></a>
-      <a href="HomePage.php">Home</a>
+    <a href="Index.php"><img src="src/asserts/images/logo.png"></a>
+      <a href="Index.php">Home</a>
       <div class="plan-section">
         <button id="planBtn">Insurance Plans</button>
         <div class="plan-category">
@@ -51,7 +51,7 @@
         </div>
 
       </div>
-      <a href="#">About Us</a>
+      <a href="aboutus.php">About Us</a>
       <a href="24assi.php">Contact Us</a>
       <a href="FAQ_PAGE.php">FAQ</a>
       <?php
@@ -62,7 +62,7 @@
             if (isset($_SESSION['email']) && isset($_SESSION['name'])) {
               // Display the name and email
               echo "<div class='user_name'>
-                      <p>WELCOME, <a href='#'>". htmlspecialchars($_SESSION['name']) ."<br>" .htmlspecialchars($_SESSION['email'])."</p</a>>
+                      <p> <a href = 'userdashboard.php' >WELCOME,". htmlspecialchars($_SESSION['name']) ."<br>" .htmlspecialchars($_SESSION['email'])."</p></a>
                     </div>";
               
               echo "<form action='adminlogout.php' method='POST'>

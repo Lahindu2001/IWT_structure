@@ -77,13 +77,14 @@ body {
 .but {
     background-color: #00ced1;
     color: white;
-    padding: 14px 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
     width: 100%;
     text-align: center;
+    margin-top: 5px;
 
 }
 

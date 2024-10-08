@@ -56,7 +56,6 @@
                          <form action='updatemain1.php' method='POST'>
                             <input type='hidden' name='update' value='" . $row["userId"] . "'>
                             <input type='submit' value='Update'class='btn btn-edit'>
-
                         </form>
                       </td>";
 
@@ -67,7 +66,7 @@
             </table>
             </div>
             <center><a href="adduserform1.php" ><button class="btn btn-add">ADD new User</button></a></center>
-        </div><
+        </div>
         <div class = "backb">
  <center><a href='in.php' ><button class='btn-back'>back to Dashbord</button></a></center> 
 </div>

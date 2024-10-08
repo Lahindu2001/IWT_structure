@@ -4,7 +4,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css files/newTryReadCss.css">
+    <link rel="stylesheet" href="src/asserts/css files/newTryReadCss.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -14,7 +14,7 @@
 
     <?php
 
-    require 'config.php';
+    require 'configHasaranga.php';
 
     $custNIC = $_POST["cusNIC"];
 
@@ -60,7 +60,7 @@
     echo "
 
         
-        <form action = 'updatehasa.php' method = 'POST' id='updateForm'> 
+        <form action = 'updateHasaranga.php' method = 'POST' id='updateForm'> 
 
             <div class='form-group'>
                   <label >NIC</label> 
@@ -123,7 +123,6 @@
               <div class='form-group'>
                   <label>Time of Meeting</label> 
                   <input type='time' id='meeting-time' name='cusMeetingTime' required value='$custMeetTime'>
-                  <label id='redNote'>Please make a reservation between 9am and 5pm on weekdays</label>
               </div>
 
               <div class='form-group'>
@@ -140,7 +139,8 @@
               </div>
 
               <div class='form-group'>
-                  <button type='submit' onclick='updateMeeting()'>Update New Details</button>
+                  <button type='submit'>Update New Details</button>
+                  <script src='src/asserts/js files/UpdateMeetingValidate.js'></script>
               </div>
         </form>
     ";
@@ -157,7 +157,7 @@
                     <legend>Delete The Reservation</legend>
                     <div class="cont">
 
-                        <form action="delete.php" method="POST">
+                        <form action="deleteHasaranga.php" method="POST">
                             <div class="formGrp">
                                 <label>First Name</label><br><br>
                                 <input type="text" id="first-name" name="cuFirstName" required>
@@ -182,7 +182,7 @@
             </div>
 
 
-            <script src="src\asserts\js\newTryReadjs.js"></script>
+         <script src="src/asserts/js files/newTryReadjs.js"></script>
 </body>
 
 </html>

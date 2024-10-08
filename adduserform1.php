@@ -77,8 +77,7 @@
 <form  method ="post" action ="insert.php" onsubmit="return validateForm()">
         <h1>User Information</h1>
 
-<!--
-        <input type='text' id='userid' name='userid'  > -->
+    <!-- <input type='text' id='userid' name='userid'> -->
 
         <label >Name:</label>
         <input type="text" id="name" name="name" >
@@ -128,7 +127,6 @@
 
         <input type="submit" value="Submit">
         <input type="reset" value="reset">
-        </form>
     </form>
 </body>
 </html>

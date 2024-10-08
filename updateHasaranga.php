@@ -1,6 +1,6 @@
 <?php
 
-require 'config.php';
+require 'configHasaranga.php';
 
 $custFname = $_POST["cusFirstName"];
 $custLname = $_POST["cusLastName"];

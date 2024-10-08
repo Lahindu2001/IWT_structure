@@ -52,6 +52,24 @@
             return false;
         }
 
+         // Validate Password
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return false;
+    }
+
+    // Confirm Password Match
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    // Check if Terms and Conditions are agreed
+    if (!terms) {
+        alert("You must agree to the terms and conditions.");
+        return false;
+    }
+
     
         return true;
 }

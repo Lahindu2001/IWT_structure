@@ -12,33 +12,18 @@
 
 <body>
 
-<nav>
-    <div class="navlinks">
-      <img src="src/asserts/images/logo.png">
-      <a href="#">Home</a>
-      <div class="plan-section">
-        <button id="planBtn">Insurance Plans</button>
-        <div class="plan-category">
-          <a href="#">Emergency Coverage</a>
-          <a href="#">Complete Coverage</a>
-          <a href="#">Family all-in-one</a>
-          <a href="#">Elder Citizense</a>
-        </div>
 
-      </div>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
-      <div class="sub-log-Btn">
-        <button id="signinBtn">Sign In</button>
-        <button id="loginBtn">Log In</button>
-      </div>
-    </div>
-  </nav>
+    <?php  include ('hedder.php') ;  ?>
 
-    <header>
-        <h1>oppunite</h1>
-        <p>we always youre familly</p>
-    </header>
+<div class="heade_cont">
+<h1>oppunite</h1>
+<p>we always youre familly</p>
+</div>
+<div class="back_im">
+    <img  src="src/asserts/images/oppun.jpg" alt="img">
+</div>
+
+
 
     <div class="container">
         <div class="grid">
@@ -69,33 +54,7 @@
 
     
    
-    <footer>
-    <div class="leftImg">
-      <img src="src/asserts/images/logo.png" alt="">
-    </div>
-    <div class="rightCont">
-      <div class="footNavLinks">
-        <a href="#">Home</a>
-        <a href="#">Insurance Plans</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <p>Life insurance supports your family with money if you pass away. How Insurance Works You pay a small amount of
-        money regularly, called a premium, to the insurance company. Many people do this, and the company collects a lot
-        of money. Most of the time, nothing bad happens, so the company doesn't need to use all the money.</p>
-      <div class="social">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-square-instagram"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-telegram"></i>
-      </div>
-
-      <div class="lastcont">
-        <p>Copyrigh © 2024 Website All rights</p>
-        <p><u>Team & Conditionas | Privacy Policy</u></p>
-      </div>
-    </div>
-  </footer>
+    <?php  include ('footer.php') ;  ?>
 
 </body>
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/asserts/css/hedderfoteer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,13 +19,13 @@
       
   <footer>
     <div class="leftImg">
-    <a href="HomePage.php"><img src="src/asserts/images/logo.png"></a>
+    <a href="Index.php"><img src="src/asserts/images/logo.png"></a>
     </div>
     <div class="rightCont">
       <div class="footNavLinks">
-        <a href="HomePage.php">Home</a>
-        <a href="#">Insurance Plans</a>
-        <a href="#">About Us</a>
+        <a href="Index.php">Home</a>
+        <a href="plans.php">Insurance Plans</a>
+        <a href="aboutus.php">About Us</a>
         <a href="24assi.php">Contact Us</a>
         <a href="FAQ_PAGE.php">FAQ</a>
       </div>
@@ -40,7 +41,7 @@
 
       <div class="lastcont">
         <p>Copyrigh © 2024 Website All rights</p>
-        <p><a href = "#">Team & Conditionas<a> | <a href ="#"> Privacy Policy</a></p>
+        <p><a href = "termsCondition.php">Team & Conditionas</a> | <a href ="privacypolicy.php"> Privacy Policy</a></p>
       </div>
     </div>
   </footer>
