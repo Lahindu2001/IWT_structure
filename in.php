@@ -9,12 +9,14 @@
 <?php  include ('admin_header.php') ;  ?>
 <ul class="navi">
     <li><a href="in.php" style="background-color: #cfcfcf;">Dashboard</a></li>
-    <li><a href="table1.php">Manage Users</a></li>
+    <li><a href="table1.php" >Manage Users</a></li>
     <li><a href="table2.php">Manage Claim</a></li>
     <li><a href="table3.php">Manage Employees</a></li>
     <li><a href="table4.php">Manage Meeting</a></li>
-    <li><a href="table5.php">Manage Customer Request</a></li>
-    <li style="float:right"><form action="adminlogout.php" method="POST">
+    <li><a href="table5.php" >Manage Customer Request</a></li>
+    <li><a href="table6.php" >Manage forgrt password Request </a></li>
+    <li><a href="table7.php ">Manage FAQ Request </a></li>
+    <li><form action="adminlogout.php" method="POST">
      <input name="Adminlogout" type="submit" value="Log Out" class="btn-logout">
     </form></li></ul>
 
@@ -111,6 +113,46 @@
             <a href = 'table5.php'><div class = 'datail1'>
               <div><h1> $totalCusReq</h1></div>
               <div><p>Custormer reqest Count</p></div>
+            </div></a>
+            ";
+        } 
+        else {
+            echo "Error: " . $conn->error;
+        }
+        ?>
+
+
+<?php 
+        require 'config.php';
+        $sql = "SELECT count(email) AS total_password_reqest from password_requests";
+        $result =$con->query($sql);
+        if ($result) {
+            $row = $result->fetch_assoc();
+            $totalfogPasswordReq = $row['total_password_reqest'];
+            echo "
+            <a href = 'table6.php'><div class = 'datail1'>
+              <div><h1> $totalfogPasswordReq </h1></div>
+              <div><p>password forgot reqest Count</p></div>
+            </div></a>
+            ";
+        } 
+        else {
+            echo "Error: " . $conn->error;
+        }
+        ?>
+
+
+<?php 
+        require 'config.php';
+        $sql = "SELECT count(faqNo) AS total_faq_reqest from  faqtab";
+        $result =$con->query($sql);
+        if ($result) {
+            $row = $result->fetch_assoc();
+            $totalfaqReq = $row['total_faq_reqest'];
+            echo "
+            <a href = 'table7.php'><div class = 'datail1'>
+              <div><h1> $totalfaqReq </h1></div>
+              <div><p>FAQ  Count</p></div>
             </div></a>
             ";
         } 

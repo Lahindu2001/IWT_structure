@@ -105,7 +105,6 @@ select {
 }
 
 
-
 </style>
 
 
@@ -113,6 +112,10 @@ select {
 
 
 <body>
+    <div class="heder">
+    <center><a href="Index.php"><img src="src/asserts/images/logo.png" width = "200px" height = "150px"></a><center>
+    </div>
+
 
   <div class="container">
       <h1>Frequently Asked Questions</h1>
@@ -150,7 +153,7 @@ select {
       </div>
   </div>
 
-
+<br>
   <form action="faqinsert.php" method="POST">
     <h1>Add Your Questions</h1>
 
@@ -174,7 +177,7 @@ select {
     <label>Your Question</label><br>
     <textarea name="textq" rows="4" cols="50" required></textarea><br>
 
-    <a href = "#" > <input type="submit" name="submit" value="Submit"></a>
+    <input type="submit" name="submit" value="Submit">
 </form>
 
 

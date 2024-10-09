@@ -12,9 +12,11 @@
     <li><a href="in.php">Dashboard</a></li>
     <li><a href="table1.php" >Manage Users</a></li>
     <li><a href="table2.php">Manage Claim</a></li>
-    <li><a href="table3.php">Manage Employees</a></li>
+    <li><a href="table3.php"  >Manage Employees</a></li>
     <li><a href="table4.php" style="background-color: #cfcfcf;">Manage Meeting</a></li>
-    <li><a href="table5.php">Manage Customer Request</a></li>
+    <li><a href="table5.php" >Manage Customer Request</a></li>
+    <li><a href="table6.php" >Manage forgrt password Request</a></li>
+    <li><a href="table7.php ">Manage FAQ Request </a></li>
     <li><form action="adminlogout.php" method="POST">
      <input name="Adminlogout" type="submit" value="Log Out" class="btn-logout">
     </form></li></ul>
